@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!--위치장소부스 출력-->
+<div>
+    {% for booth in booths%}
+         <div>
+             <p>{{booth.booth_num}}번 부스</p>
+             <p>이름 : {{booth.name}}</p>
+             <p>메뉴 : {{booth.detail}}</p>
+             <hr>
+         </div>
+    {% endfor %}
+</div>
+{% endblock %}
